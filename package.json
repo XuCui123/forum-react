@@ -1,0 +1,42 @@
+{
+  "name": "forum-react",
+  "version": "1.0.0",
+  "description": "forum static with react",
+  "entry": {
+    "index": "./src/index.js"
+  },
+  "scripts": {
+    "dev": "dool server",
+    "build": "dool build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XuCui123/forum-react.git"
+  },
+  "keywords": [
+    "forum",
+    "react",
+    "static"
+  ],
+  "author": "xucui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XuCui123/forum-react/issues"
+  },
+  "homepage": "https://github.com/XuCui123/forum-react#readme",
+  "dependencies": {
+    "antd": "^2.10.2",
+    "axios": "^0.16.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "yax": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "dool": "^2.1.0"
+  }
+}
