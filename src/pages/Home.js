@@ -21,7 +21,7 @@ class Home extends Component {
           <div className="topic-list">
             {topic.list.map(item => <TopicItem topic={item} />)}
           </div>
-          <div className="topic-page">
+          <div className="home-pager">
             <Pagination
               current={page}
               total={topic.count}

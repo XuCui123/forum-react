@@ -3,6 +3,7 @@ import yax, { composeReducers, mapReducers, applyMiddleware } from 'yax';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import auth from './models/auth';
 import topic from './models/topic';
+import reply from './models/reply';
 
 export default (history) => {
   const router = createStore => (reducer, preloadedState) => {
@@ -21,7 +22,7 @@ export default (history) => {
   };
   const store = yax({
     state: {},
-    modules: { auth, topic }
+    modules: { auth, topic, reply }
   }, router);
   const handlers = {};
   const on = (type, fn) => {

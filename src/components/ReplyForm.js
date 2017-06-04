@@ -3,12 +3,13 @@ import { Form, Input, Button } from 'antd';
 
 const FormItem = Form.Item;
 
-class TopicForm extends Component {
+class ReplyForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
         this.props.onSubmit(values);
+        this.props.form.resetFields();
       }
     });
   }
@@ -17,22 +18,15 @@ class TopicForm extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         <FormItem>
-          {getFieldDecorator('title', {
-            rules: [{ required: true, message: 'Please input title!' }],
-          })(
-            <Input placeholder="这里填写标题" />
-          )}
-        </FormItem>
-        <FormItem>
           {getFieldDecorator('content', {
             rules: [{ required: true, message: 'Please input content!' }],
           })(
-            <Input type="textarea" rows={30} placeholder="这里填写内容" />
+            <Input type="textarea" rows={6} placeholder="这里填写内容" />
           )}
         </FormItem>
         <FormItem>
           <Button type="primary" htmlType="submit">
-            提交
+            评论
           </Button>
         </FormItem>
       </Form>
@@ -40,4 +34,4 @@ class TopicForm extends Component {
   }
 }
 
-export default Form.create()(TopicForm);
+export default Form.create()(ReplyForm);
