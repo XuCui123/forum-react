@@ -9,6 +9,7 @@ import createStore from './store';
 import Home from './pages/Home';
 import AddTopic from './pages/AddTopic';
 import Topic from './pages/Topic';
+import User from './pages/User';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route path="/topic/:id" component={Topic}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
+        <Route path="/user/:id" component={User}/>
       </Switch>
     </ConnectedRouter>
   </Provider>,
